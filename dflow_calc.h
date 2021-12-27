@@ -13,7 +13,6 @@ extern "C" {
 
 /// Maximum number of opcodes in the processor
 #define MAX_OPS 32
-#define REGS_NUM 32
 
 /// Program context
 /// This is a reference to the (internal) data maintained for a given program
@@ -68,34 +67,5 @@ int getProgDepth(ProgCtx ctx);
 #ifdef __cplusplus
 }
 #endif
-
-class Node
-{
-    public:
-        InstInfo op;
-        unsigned int op_num;
-        unsigned int latency;
-        Node* father_one;
-        Node* father_two;
-        bool IsDep;
-
-        Node(/* args */);
-        Node(InstInfo op_recieved, unsigned int op_num, unsigned int latency);
-        ~Node();
-};
-
-class ProgDepTree{
-    private:
-        Node** ops;
-        Node* reg_deps[REGS_NUM];
-        unsigned int numOfInsts;
-        
-    public:
-        ProgDepTree(const unsigned int opsLatency[], const InstInfo progTrace[], unsigned int numOfInsts);
-        ~ProgDepTree();
-        int getProgDepth();
-        int getInstDeps(unsigned int theInst, int *src1DepInst, int *src2DepInst);
-        int getInstDepth(unsigned int theInst);
-};
 
 #endif /*_DFLOW_CALC_H_*/

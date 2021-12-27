@@ -3,6 +3,36 @@
 
 #include "dflow_calc.h"
 
+#define REGS_NUM 32
+
+class Node
+{
+    public:
+        InstInfo op;
+        unsigned int op_num;
+        unsigned int latency;
+        Node* father_one;
+        Node* father_two;
+        bool IsDep;
+
+        Node(/* args */);
+        Node(InstInfo op_recieved, unsigned int op_num, unsigned int latency);
+};
+
+class ProgDepTree{
+    private:
+        Node** ops;
+        Node* reg_deps[REGS_NUM];
+        unsigned int numOfInsts;
+        
+    public:
+        ProgDepTree(const unsigned int opsLatency[], const InstInfo progTrace[], unsigned int numOfInsts);
+        ~ProgDepTree();
+        int getProgDepth();
+        int getInstDeps(unsigned int theInst, int *src1DepInst, int *src2DepInst);
+        int getInstDepth(unsigned int theInst);
+};
+
 Node::Node() :
     op(),
     op_num(0),
@@ -13,8 +43,8 @@ Node::Node() :
 {}
 
 Node::Node(InstInfo op_recieved, unsigned int op_num, unsigned int latency) :
-    op_num(0),
-    latency(0),
+    op_num(op_num),
+    latency(latency),
     father_one(nullptr),
     father_two(nullptr),
     IsDep(false)
@@ -50,7 +80,8 @@ ProgCtx analyzeProg(const unsigned int opsLatency[], const InstInfo progTrace[],
 }
 
 void freeProgCtx(ProgCtx ctx) {
-    delete ctx;
+    ProgDepTree* obj = (ProgDepTree*)ctx;
+    delete obj;
 }
 
 int getInstDepth(ProgCtx ctx, unsigned int theInst) {
@@ -72,7 +103,7 @@ ProgDepTree::ProgDepTree(const unsigned int opsLatency[], const InstInfo progTra
  : ops(nullptr), numOfInsts(numOfInsts){
     ops = new Node* [numOfInsts];
 
-    for (int i=0 ; i<numOfInsts ; i++)
+    for (unsigned int i=0 ; i<numOfInsts ; i++)
     {
         ops[i] = new Node(progTrace[i], i, opsLatency[progTrace[i].opcode]);
     }
@@ -82,7 +113,7 @@ ProgDepTree::ProgDepTree(const unsigned int opsLatency[], const InstInfo progTra
         reg_deps[i] = nullptr;
     }
 
-    for (int i=0; i<numOfInsts; i++)
+    for (unsigned int i=0; i<numOfInsts; i++)
     {
         if(reg_deps[ops[i]->op.src1Idx] != nullptr)
         {
@@ -102,7 +133,7 @@ ProgDepTree::ProgDepTree(const unsigned int opsLatency[], const InstInfo progTra
 
 ProgDepTree::~ProgDepTree()
 {
-    for (int i=0; i < numOfInsts; i++){
+    for (unsigned int i=0; i < numOfInsts; i++){
         delete ops[i];
     }
     delete[] ops;
@@ -110,35 +141,9 @@ ProgDepTree::~ProgDepTree()
 
 int ProgDepTree::getInstDeps(unsigned int theInst, int *src1DepInst, int *src2DepInst)
 {
-
-    int deps = (ops[theInst]->father_one != nullptr) + (ops[theInst]->father_two != nullptr);
-
-    switch (deps)
-    {
-    case 2:
-        *src1DepInst = ops[theInst]->father_one->op_num;
-        *src2DepInst = ops[theInst]->father_two->op_num;
-        break;
-
-    case 1:
-        if(ops[theInst]->father_one != nullptr)
-        {
-            *src1DepInst = ops[theInst]->father_one->op_num;
-        }
-        else
-        {
-            *src1DepInst = ops[theInst]->father_two->op_num;
-        }
-        break;
-
-    case 0:
-        return -1;
-        break;
-    
-    default:
-        return -1;
-        break;
-    }
+    *src1DepInst = ops[theInst]->father_one != nullptr ? ops[theInst]->father_one->op_num : -1;
+    *src2DepInst = ops[theInst]->father_two != nullptr ? ops[theInst]->father_two->op_num : -1;
+    return 0;
 }
 
 int ProgDepTree::getInstDepth(unsigned int theInst)
@@ -149,7 +154,7 @@ int ProgDepTree::getInstDepth(unsigned int theInst)
 int ProgDepTree::getProgDepth()
 {
     int max = 0;
-    for (int i = 0 ; i < numOfInsts ; i++)
+    for (unsigned int i = 0 ; i < numOfInsts ; i++)
     {
         if(!ops[i]->IsDep)
         {

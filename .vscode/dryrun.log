@@ -1,0 +1,7 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/compm/Documents/computer_arc_HW3'
+gcc -c -std=c99 -Wall -O2 -o dflow_main.o dflow_main.c
+g++ -c -std=c++11 -Wall -O2 -o dflow_calc.o dflow_calc.cpp
+g++ -o dflow_calc dflow_main.o dflow_calc.o
+make: Leaving directory '/home/compm/Documents/computer_arc_HW3'
+ 
