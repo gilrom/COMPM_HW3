@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Mon Dec 27 23:30:46 2021
+# Make data base, printed on Tue Jan  4 23:01:05 2022
 
 # Variables
 
@@ -18,156 +18,94 @@ OBJ_DFLOW = dflow_calc.o
 ?F = $(notdir $?)
 # makefile (from 'makefile', line 27)
 OBJ_GIVEN = $(patsubst %.c,%.o,$(SRC_GIVEN))
-# environment
-DESKTOP_SESSION = ubuntu
 # default
 .SHELLFLAGS := -c
 # makefile (from 'makefile', line 29)
 OBJ = $(OBJ_GIVEN) $(OBJ_DFLOW)
 # environment
-XDG_SESSION_TYPE = x11
+VSCODE_AGENT_FOLDER = /home/compm/.vscode-server
 # environment
 VSCODE_LOG_NATIVE = false
-# environment
-UPSTART_INSTANCE = 
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # automatic
 @D = $(patsubst %/,%,$(dir $@))
-# environment
-XAUTHORITY = /home/compm/.Xauthority
-# environment
-GDMSESSION = ubuntu
-# environment
-XMODIFIERS = @im=ibus
+# automatic
+@F = $(notdir $@)
+# default
+MAKE_VERSION := 4.1
 # makefile
-CURDIR := /home/compm/Documents/computer_arc_HW3
+CURDIR := /home/compm/COMPM_HW3
 # makefile
 SHELL = /bin/sh
 # environment
-UPSTART_JOB = unity7
+VSCODE_NLS_CONFIG = {"locale":"en","availableLanguages":{}}
 # environment
-VTE_VERSION = 4205
-# environment
-VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
-# environment
-_ = /usr/bin/code
+_ = /home/compm/.vscode-server/bin/899d46d82c4c95423fb7e10e68eba52050e30ba3/node
 # makefile (from 'makefile', line 17)
 CFLAGS = -std=c99 -Wall -O2
-# environment
-XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/usr/share/upstart/xdg:/etc/xdg
 # makefile (from 'makefile', line 1)
 MAKEFILE_LIST :=  makefile
-# automatic
-@F = $(notdir $@)
-# environment
-IM_CONFIG_PHASE = 1
 # 'override' directive
 GNUMAKEFLAGS := 
-# environment
-SESSIONTYPE = gnome-session
 # makefile (from 'makefile', line 18)
 CXXFLAGS = -std=c++11 -Wall -O2
 # environment
 MAKELEVEL := 0
 # environment
-MANDATORY_PATH = /usr/share/gconf/ubuntu.mandatory.path
-# environment
-XDG_DATA_DIRS = /usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop
-# environment
-DBUS_SESSION_BUS_ADDRESS = unix:abstract=/tmp/dbus-ie7sAgyxtD
+XDG_DATA_DIRS = /usr/local/share:/usr/share:/var/lib/snapd/desktop
 # environment
 VSCODE_VERBOSE_LOGGING = true
-# environment
-CLUTTER_IM_MODULE = xim
 # environment
 LESSOPEN = | /usr/bin/lesspipe %s
 # environment
 LC_NAME = he_IL.UTF-8
 # environment
-VSCODE_CWD = /home/compm/Documents/computer_arc_HW3
+VSCODE_CWD = /home/compm
 # environment
-XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session0
-# default
-MAKE_HOST := x86_64-pc-linux-gnu
+SSH_CONNECTION = 192.168.111.1 52868 192.168.111.128 22
 # environment
-PATH = /home/compm/bin:/home/compm/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
-# environment
-GPG_AGENT_INFO = /home/compm/.gnupg/S.gpg-agent:0:1
+PATH = /home/compm/.vscode-server/bin/899d46d82c4c95423fb7e10e68eba52050e30ba3/bin:/home/compm/bin:/home/compm/.local/bin:/home/compm/.vscode-server/bin/899d46d82c4c95423fb7e10e68eba52050e30ba3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
-WINDOWID = 62914570
-# environment
 VSCODE_LOG_STACK = false
 # environment
-VSCODE_CRASH_REPORTER_START_OPTIONS = {"companyName":"Microsoft","productName":"VSCode","submitURL":"","uploadToServer":false}
+LC_NUMERIC = he_IL.UTF-8
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
-SESSION = ubuntu
-# environment
-XDG_GREETER_DATA_DIR = /var/lib/lightdm-data/compm
-# environment
-LS_COLORS = rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
-# environment
-JOB = unity-settings-daemon
-# environment
-XDG_SESSION_DESKTOP = ubuntu
-# environment
-SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
+LS_COLORS = 
 # automatic
 %F = $(notdir $%)
 # environment
-DISPLAY = :0
-# environment
-GTK_IM_MODULE = ibus
-# environment
 VSCODE_PIPE_LOGGING = true
 # environment
-PWD = /home/compm/Documents/computer_arc_HW3
+PWD = /home/compm/COMPM_HW3
 # environment
 QT_QPA_PLATFORMTHEME = appmenu-qt5
 # environment
-XDG_SEAT = seat0
+VSCODE_IPC_HOOK_CLI = /run/user/1000/vscode-ipc-ce560d9a-cdd2-4efe-be78-0f2c919a1a03.sock
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
 # environment
-GDM_LANG = en_US
-# environment
-ORIGINAL_XDG_CURRENT_DESKTOP = Unity
-# environment
-GTK_MODULES = gail:atk-bridge:unity-gtk-module
-# environment
-VSCODE_AMD_ENTRYPOINT = vs/workbench/services/extensions/node/extensionHostProcess
+VSCODE_AMD_ENTRYPOINT = vs/server/remoteExtensionHostProcess
 # environment
 HOME = /home/compm
 # environment
 LESSCLOSE = /usr/bin/lesspipe %s %s
-# environment
-VSCODE_CLI = 1
 # makefile (from 'makefile', line 25)
 EXTRA_DEPS = dflow_calc.h
 # environment
-VSCODE_CODE_CACHE_PATH = /home/compm/.config/Code/CachedData/899d46d82c4c95423fb7e10e68eba52050e30ba3
-# environment
 LOGNAME = compm
-# environment
-QT_LINUX_ACCESSIBILITY_ALWAYS_ON = 1
 # environment
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
 # automatic
 +F = $(notdir $+)
 # environment
-ELECTRON_NO_ATTACH_CONSOLE = 1
-# environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
-# default
-MAKE_VERSION := 4.1
-# environment
-GNOME_DESKTOP_SESSION_ID = this-is-deprecated
 # automatic
 ^D = $(patsubst %/,%,$(dir $^))
-# environment
-XDG_VTNR = 7
 # environment
 LC_TIME = he_IL.UTF-8
 # default
@@ -175,33 +113,19 @@ MAKE = $(MAKE_COMMAND)
 # default
 MAKECMDGOALS := all
 # environment
-QT_IM_MODULE = ibus
-# environment
-SHLVL = 1
+SHLVL = 3
 # makefile (from 'makefile', line 7)
 CC = gcc
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-0c1cb92d-3cf6-4948-b277-1158a23dab26.sock
-# environment
-COMPIZ_CONFIG_PROFILE = ubuntu-lowgfx
-# environment
-XDG_SESSION_ID = c1
+XDG_SESSION_ID = 1
 # environment
 USER = compm
 # environment
 LC_MONETARY = he_IL.UTF-8
 # makefile
 .DEFAULT_GOAL := all
-# environment
-XDG_CURRENT_DESKTOP = Unity
-# environment
-UPSTART_EVENTS = xsession started
-# environment
-CHROME_DESKTOP = code-url-handler.desktop
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
-# environment
-GNOME_KEYRING_PID = 
 # environment
 LC_TELEPHONE = he_IL.UTF-8
 # makefile (from 'makefile', line 23)
@@ -210,85 +134,56 @@ SRC_DFLOW = $(wildcard dflow_calc.c dflow_calc.cpp)
 SRC_GIVEN = dflow_main.c
 # default
 MAKE_COMMAND := make
-# environment
-OLDPWD = /home/compm
 # default
 .VARIABLES := 
 # automatic
 *F = $(notdir $*)
-# environment
-LANGUAGE = en_US
-# environment
-XDG_SEAT_PATH = /org/freedesktop/DisplayManager/Seat0
-# environment
-VSCODE_IPC_HOOK = /run/user/1000/vscode-799bc6e0-1.63.2-main.sock
-# environment
-GNOME_KEYRING_CONTROL = 
 # makefile
 MAKEFLAGS = pqrR
 # environment
 MFLAGS = -pqrR
-# automatic
-*D = $(patsubst %/,%,$(dir $*))
 # environment
-BREAKPAD_DUMP_LOCATION = /home/compm/.config/Code/exthost Crash Reports
+SSH_CLIENT = 192.168.111.1 52868 22
+# environment
+MAIL = /var/mail/compm
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # environment
-GDK_BACKEND = x11
+BROWSER = /home/compm/.vscode-server/bin/899d46d82c4c95423fb7e10e68eba52050e30ba3/bin/helpers/browser.sh
 # environment
-LC_PAPER = he_IL.UTF-8
-# environment
-GTK2_MODULES = overlay-scrollbar
-# environment
-QT_ACCESSIBILITY = 1
-# environment
-COMPIZ_BIN_PATH = /usr/bin/
-# environment
-DEFAULTS_PATH = /usr/share/gconf/ubuntu.default.path
+LC_IDENTIFICATION = he_IL.UTF-8
 # default
 MAKEFILES := 
-# environment
-UPSTART_SESSION = unix:abstract=/com/ubuntu/upstart-session/1000/2114
-# environment
-LC_NUMERIC = he_IL.UTF-8
 # automatic
 <F = $(notdir $<)
-# environment
-ELECTRON_RUN_AS_NODE = 1
+# automatic
+^F = $(notdir $^)
 # makefile (from 'makefile', line 10)
 CXX = g++
 # environment
 LC_MEASUREMENT = he_IL.UTF-8
 # environment
-INSTANCE = 
-# environment
 LC_ALL = C
 # environment
-QT4_IM_MODULE = xim
-# automatic
-^F = $(notdir $^)
+LC_PAPER = he_IL.UTF-8
 # default
 SUFFIXES := 
-# environment
-LIBGL_ALWAYS_SOFTWARE = 1
 # default
 .INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
 # environment
-LC_IDENTIFICATION = he_IL.UTF-8
- 
+VSCODE_INJECT_NODE_MODULE_LOOKUP_PATH = /home/compm/.vscode-server/bin/899d46d82c4c95423fb7e10e68eba52050e30ba3/remote/node_modules
 # default
 .RECIPEPREFIX := 
 # environment
 LC_ADDRESS = he_IL.UTF-8
+# default
+MAKE_HOST := x86_64-pc-linux-gnu
 # environment
 LANG = C
 # environment
-TERM = xterm-256color
-# environment
-VSCODE_PID = 4105
+VSCODE_EXTHOST_WILL_SEND_SOCKET = true
 # variable set hash-table stats:
-# Load=138/1024=13%, Rehash=0, Collisions=20/180=11%
+# Load=86/1024=8%, Rehash=0, Collisions=15/131=11%
 
 # Pattern-specific Variable Values
 
@@ -296,9 +191,9 @@ VSCODE_PID = 4105
 
 # Directories
 
-# . (device 2049, inode 389): 9 files, no impossibilities.
+# . (device 2049, inode 24292): 11 files, no impossibilities.
 
-# 9 files, no impossibilities in 1 directories.
+# 11 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -308,18 +203,36 @@ VSCODE_PID = 4105
 
 dflow_calc: dflow_main.o dflow_calc.o
 #  Implicit rule search has not been done.
+#  Implicit/static pattern stem: ''
 #  File does not exist.
 #  File has been updated.
 #  Needs to be updated (-q is set).
+# automatic
+# @ := dflow_calc
+# automatic
+# % := 
+# automatic
+# * := 
+# automatic
+# + := dflow_main.o dflow_calc.o
+# automatic
+# | := 
+# automatic
+# < := dflow_main.o
+# automatic
+# ^ := dflow_main.o dflow_calc.o
+# automatic
+# ? := dflow_main.o dflow_calc.o
 # variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/5=0%
+# Load=8/32=25%, Rehash=0, Collisions=4/17=24%
 #  recipe to execute (from 'makefile', line 43):
 	$(CXX) -o $@ $(OBJ)
 
 dflow_calc.o: dflow_calc.cpp dflow_calc.h
 #  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+#  Last modified 2022-01-04 23:00:55.262950897
+#  File has been updated.
+#  Successfully updated.
 #  recipe to execute (from 'makefile', line 46):
 	$(CXX) -c $(CXXFLAGS) -o $@ $<
 
@@ -330,7 +243,7 @@ all: dflow_calc
 #  File has been updated.
 #  Needs to be updated (-q is set).
 # variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/5=0%
+# Load=0/32=0%, Rehash=0, Collisions=0/8=0%
 
 .PHONY: clean
 #  Implicit rule search has not been done.
@@ -338,31 +251,39 @@ all: dflow_calc
 #  File has not been updated.
 
 # Not a target:
+.SUFFIXES:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
 dflow_main.c:
 #  Implicit rule search has been done.
-#  Last modified 2021-12-27 21:16:00
+#  Last modified 2022-01-04 23:00:55.262950897
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 makefile:
 #  Implicit rule search has been done.
-#  Last modified 2021-12-27 21:16:00
+#  Last modified 2022-01-04 23:00:55.262950897
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 dflow_calc.h:
 #  Implicit rule search has been done.
-#  Last modified 2021-12-27 21:16:00
+#  Last modified 2022-01-04 23:00:55.258950885
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
+ 
 dflow_calc.cpp:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+#  Implicit rule search has been done.
+#  Last modified 2022-01-04 23:00:55.258950885
+#  File has been updated.
+#  Successfully updated.
 
 # Not a target:
 .DEFAULT:
@@ -381,32 +302,14 @@ clean:
 dflow_main.o: dflow_main.c dflow_calc.h
 #  Implicit rule search has not been done.
 #  Implicit/static pattern stem: 'dflow_main'
-#  File does not exist.
+#  Last modified 2022-01-04 23:00:55.262950897
 #  File has been updated.
-#  Needs to be updated (-q is set).
-# automatic
-# @ := dflow_main.o
-# automatic
-# % := 
-# automatic
-# * := dflow_main
-# automatic
-# + := dflow_main.c dflow_calc.h
-# automatic
-# | := 
-# automatic
-# < := dflow_main.c
-# automatic
-# ^ := dflow_main.c dflow_calc.h
-# automatic
-# ? := dflow_main.c dflow_calc.h
-# variable set hash-table stats:
-# Load=8/32=25%, Rehash=0, Collisions=1/15=7%
+#  Successfully updated.
 #  recipe to execute (from 'makefile', line 50):
 	$(CC) -c $(CFLAGS) -o $@ $<
 
 # files hash-table stats:
-# Load=12/1024=1%, Rehash=0, Collisions=0/35=0%
+# Load=12/1024=1%, Rehash=0, Collisions=0/36=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
@@ -416,9 +319,9 @@ dflow_main.o: dflow_main.c dflow_calc.h
 # strcache buffers: 1 (0) / strings = 22 / storage = 201 B / avg = 9 B
 # current buf: size = 8162 B / used = 201 B / count = 22 / avg = 9 B
 
-# strcache performance: lookups = 41 / hit rate = 46%
+# strcache performance: lookups = 44 / hit rate = 50%
 # hash-table stats:
-# Load=22/8192=0%, Rehash=0, Collisions=1/41=2%
-# Finished Make data base on Mon Dec 27 23:30:46 2021
+# Load=22/8192=0%, Rehash=0, Collisions=1/44=2%
+# Finished Make data base on Tue Jan  4 23:01:05 2022
 
  

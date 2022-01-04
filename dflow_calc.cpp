@@ -5,6 +5,7 @@
 
 #define REGS_NUM 32
 
+//Defines a node in dependencies tree
 class Node
 {
     public:
@@ -19,10 +20,11 @@ class Node
         Node(InstInfo op_recieved, unsigned int op_num, unsigned int latency);
 };
 
+//data starcture for dependencies tree
 class ProgDepTree{
     private:
-        Node** ops;
-        Node* reg_deps[REGS_NUM];
+        Node** ops; //operations nodes
+        Node* reg_deps[REGS_NUM]; // an array to save the last operation writed to register
         unsigned int numOfInsts;
         
     public:
@@ -33,6 +35,7 @@ class ProgDepTree{
         int getInstDepth(unsigned int theInst);
 };
 
+//Node empty ctor
 Node::Node() :
     op(),
     op_num(0),
@@ -42,6 +45,7 @@ Node::Node() :
     IsDep(false)
 {}
 
+//ctor
 Node::Node(InstInfo op_recieved, unsigned int op_num, unsigned int latency) :
     op_num(op_num),
     latency(latency),
@@ -59,6 +63,7 @@ inline unsigned int Maximum(unsigned int a, unsigned int b)
     else return b;
 }
 
+//recursive function to iterate over the tree and find the max latency rout for specific node
 unsigned int maxLatencyFromOp(Node* op)
 {
     if(op == nullptr)
@@ -99,6 +104,7 @@ int getProgDepth(ProgCtx ctx) {
     return obj->getProgDepth();
 }
 
+//ctor for tree
 ProgDepTree::ProgDepTree(const unsigned int opsLatency[], const InstInfo progTrace[], unsigned int numOfInsts)
  : ops(nullptr), numOfInsts(numOfInsts){
     ops = new Node* [numOfInsts];
@@ -115,6 +121,7 @@ ProgDepTree::ProgDepTree(const unsigned int opsLatency[], const InstInfo progTra
 
     for (unsigned int i=0; i<numOfInsts; i++)
     {
+        //if op reads from previous writen register
         if(reg_deps[ops[i]->op.src1Idx] != nullptr)
         {
             ops[i]->father_one = reg_deps[ops[i]->op.src1Idx];
